@@ -16,15 +16,9 @@ namespace chat
         public loginWindow()
         {
             InitializeComponent();
-            m_socket _Socket = new m_socket();
-            _Socket.MSocket();
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void regist_Click(object sender, EventArgs e)
         {

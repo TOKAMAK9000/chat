@@ -25,7 +25,7 @@ namespace chat
             }
             string time;
             user.mUser.currentSending = localMessage.Text;
-            time = DateTime.Now.ToLongTimeString().ToString();
+            time = DateTime.Now.ToString();
             user.mUser.messageLog.Add(time);
 
             viewChat.Text = viewChat.Text + "\r\nme " + time + "\r\n";

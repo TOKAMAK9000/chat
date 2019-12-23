@@ -61,6 +61,7 @@
             this.NewUsername.Size = new System.Drawing.Size(216, 21);
             this.NewUsername.TabIndex = 5;
             this.NewUsername.Text = "请输入用户名";
+            this.NewUsername.Click += new System.EventHandler(this.NewUsername_Click);
             // 
             // label1
             // 

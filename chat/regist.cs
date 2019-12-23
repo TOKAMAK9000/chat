@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+
 
 namespace chat
 {
@@ -48,6 +50,17 @@ namespace chat
                 NewPassword.Text = "请输入密码";
                 return;
             }
+
+            registInfo reg = new registInfo();
+            reg.userName = NewUsername.Text;
+            reg.password = NewPassword.Text;
+            string postRegistMessage = JsonConvert.SerializeObject(reg);
+            string getRes;
+
+            m_socket registSocket = new m_socket();
+            getRes=registSocket.message(postRegistMessage);
+            MessageBox.Show(getRes);
         }
+
     }
 }
