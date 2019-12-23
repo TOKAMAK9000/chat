@@ -11,3 +11,6 @@ C:\Users\TOKAMAK\source\repos\chat\chat\obj\Debug\chat.csproj.CoreCompileInputs.
 C:\Users\TOKAMAK\source\repos\chat\chat\obj\Debug\chat.exe
 C:\Users\TOKAMAK\source\repos\chat\chat\obj\Debug\chat.pdb
 C:\Users\TOKAMAK\source\repos\chat\chat\obj\Debug\chat.chatWindow.resources
+C:\Users\TOKAMAK\source\repos\chat\chat\bin\Debug\Newtonsoft.Json.dll
+C:\Users\TOKAMAK\source\repos\chat\chat\bin\Debug\Newtonsoft.Json.xml
+C:\Users\TOKAMAK\source\repos\chat\chat\obj\Debug\chat.csproj.CopyComplete
