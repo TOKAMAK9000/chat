@@ -33,7 +33,7 @@
             this.localMessage = new System.Windows.Forms.TextBox();
             this.selectFile = new System.Windows.Forms.Button();
             this.send = new System.Windows.Forms.Button();
-            this.viewChat = new System.Windows.Forms.TextBox();
+            this.viewChat = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -85,13 +85,12 @@
             // 
             // viewChat
             // 
-            this.viewChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.viewChat.Location = new System.Drawing.Point(28, 26);
-            this.viewChat.Multiline = true;
+            this.viewChat.Location = new System.Drawing.Point(28, 12);
             this.viewChat.Name = "viewChat";
             this.viewChat.ReadOnly = true;
-            this.viewChat.Size = new System.Drawing.Size(498, 300);
+            this.viewChat.Size = new System.Drawing.Size(499, 319);
             this.viewChat.TabIndex = 5;
+            this.viewChat.Text = "";
             // 
             // chatWindow
             // 
@@ -104,7 +103,7 @@
             this.Controls.Add(this.localMessage);
             this.Controls.Add(this.chatLog);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "chatWindow";
             this.Text = "chatWindow";
@@ -120,6 +119,6 @@
         private System.Windows.Forms.TextBox localMessage;
         private System.Windows.Forms.Button selectFile;
         private System.Windows.Forms.Button send;
-        private System.Windows.Forms.TextBox viewChat;
+        private System.Windows.Forms.RichTextBox viewChat;
     }
 }

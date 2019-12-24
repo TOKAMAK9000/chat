@@ -19,15 +19,7 @@ namespace chat
             InitializeComponent();
         }
 
-   
-        private void NewUsername_Click(object sender, EventArgs e)
-        {
-            NewUsername.Text = "";
-        }
-        private void NewPassword_Click(object sender, EventArgs e)
-        {
-            NewPassword.Text = "";
-        }
+
 
         private void regist_Click(object sender, EventArgs e)
         {
@@ -62,5 +54,14 @@ namespace chat
             MessageBox.Show(getRes);
         }
 
+        private void NewUsername_MouseClick(object sender, MouseEventArgs e)
+        {
+            NewUsername.Text = "";
+        }
+
+        private void NewPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            NewPassword.Text = "";
+        }
     }
 }

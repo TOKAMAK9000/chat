@@ -52,6 +52,7 @@
             this.NewPassword.Size = new System.Drawing.Size(216, 21);
             this.NewPassword.TabIndex = 6;
             this.NewPassword.Text = "请输入密码";
+            this.NewPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NewPassword_MouseClick);
             // 
             // NewUsername
             // 
@@ -61,7 +62,7 @@
             this.NewUsername.Size = new System.Drawing.Size(216, 21);
             this.NewUsername.TabIndex = 5;
             this.NewUsername.Text = "请输入用户名";
-            this.NewUsername.Click += new System.EventHandler(this.NewUsername_Click);
+            this.NewUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NewUsername_MouseClick);
             // 
             // label1
             // 

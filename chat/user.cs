@@ -12,6 +12,7 @@ namespace chat
         public string userName="";
         public string password="";
         public string currentSending = "";
+        public string currentSendingPic = "";
 
         public static user mUser = new user();
         public List<string> messageLog = new List<string>();
