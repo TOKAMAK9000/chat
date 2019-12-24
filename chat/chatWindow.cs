@@ -64,9 +64,10 @@ namespace chat
                 
                 user.mUser.currentSending = localMessage.Text;
                 time = DateTime.Now.ToString();
+
                 user.mUser.messageLog.Add(time);
 
-                viewChat.Text = viewChat.Text + "\r\nme " + time + "\r\n";
+                viewChat.AppendText("\r\nme " + time + "\r\n");
 
 
                 Image pic = changePicZize(user.mUser.currentSendingPic);
@@ -77,6 +78,11 @@ namespace chat
                 viewChat.ReadOnly = true;
 
                 user.mUser.currentSendingPic = "";
+                viewChat.Focus();
+                //设置光标的位置到文本尾  
+                viewChat.Select(viewChat.TextLength, 0);
+                //滚动到控件光标处  
+                viewChat.ScrollToCaret();
                 return;
 
             }
@@ -90,9 +96,14 @@ namespace chat
             time = DateTime.Now.ToString();
             user.mUser.messageLog.Add(time);
 
-            viewChat.Text = viewChat.Text + "\r\nme " + time + "\r\n";
-            viewChat.Text = viewChat.Text + user.mUser.currentSending + "\r\n";
+            viewChat.AppendText("\r\nme " + time + "\r\n");
+            viewChat.AppendText(user.mUser.currentSending);
             localMessage.Text = "";
+            viewChat.Focus();
+            //设置光标的位置到文本尾  
+            viewChat.Select(viewChat.TextLength, 0);
+            //滚动到控件光标处  
+            viewChat.ScrollToCaret();
         }
 
         private void selectFile_Click(object sender, EventArgs e)
