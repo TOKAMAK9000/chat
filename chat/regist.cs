@@ -27,21 +27,7 @@ namespace chat
             newUser.userName = NewUsername.Text;
             newUser.password = NewPassword.Text;
 
-            foreach (Control ctr in this.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    TextBox textBox = (TextBox)ctr;
-                    textBox.Text = "";
-                }
-            }
-            if (newUser.userName == "请输入用户名" || newUser.password == "请输入密码" ||  newUser.userName == "" || newUser.password == "" )
-            {
-                MessageBox.Show("请输入注册信息！");
-                NewUsername.Text = "请输入用户名";
-                NewPassword.Text = "请输入密码";
-                return;
-            }
+
 
             registInfo reg = new registInfo();
             reg.userName = NewUsername.Text;
@@ -52,6 +38,22 @@ namespace chat
             m_socket registSocket = new m_socket();
             getRes=registSocket.message(postRegistMessage);
             MessageBox.Show(getRes);
+
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    TextBox textBox = (TextBox)ctr;
+                    textBox.Text = "";
+                }
+            }
+            if (newUser.userName == "请输入用户名" || newUser.password == "请输入密码" || newUser.userName == "" || newUser.password == "")
+            {
+                MessageBox.Show("请输入注册信息！");
+                NewUsername.Text = "请输入用户名";
+                NewPassword.Text = "请输入密码";
+                return;
+            }
         }
 
         private void NewUsername_MouseClick(object sender, MouseEventArgs e)
