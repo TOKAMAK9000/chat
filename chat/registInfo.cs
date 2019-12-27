@@ -8,6 +8,7 @@ namespace chat
 {
     class registInfo
     {
+        public string ewquestServe = "regist";
         public string userName="";
         public string password="";
     }

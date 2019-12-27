@@ -26,9 +26,7 @@ namespace chat
             user newUser = new user();
             newUser.userName = NewUsername.Text;
             newUser.password = NewPassword.Text;
-
-
-
+            
             registInfo reg = new registInfo();
             reg.userName = NewUsername.Text;
             reg.password = NewPassword.Text;
