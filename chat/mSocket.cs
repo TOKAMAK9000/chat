@@ -15,7 +15,7 @@ namespace chat
         public string message(string postDataStr)
         {
 
-            IPAddress ip = IPAddress.Parse("192.168.0.1");
+            IPAddress ip = IPAddress.Parse("127.0.0.1");
             Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             try
@@ -30,10 +30,9 @@ namespace chat
             {
                 //Console.WriteLine("连接服务器失败，请按任意键退出！");
                 Console.Read();
+                return "failed";
             }
             
-
-
             //通过clientSocket接收数据  
             int receiveLength = clientSocket.Receive(recvBytes);
             clientSocket.Shutdown(SocketShutdown.Both);
