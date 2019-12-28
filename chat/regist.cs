@@ -26,6 +26,15 @@ namespace chat
             user newUser = new user();
             newUser.userName = NewUsername.Text;
             newUser.password = NewPassword.Text;
+            if (newUser.userName == "请输入用户名" || newUser.password == "请输入密码" || newUser.userName == "" || newUser.password == "")
+            {
+                MessageBox.Show("请输入注册信息！");
+                NewUsername.Text = "请输入用户名";
+                NewPassword.Text = "请输入密码";
+                return;
+            }
+
+            
             
             registInfo reg = new registInfo();
             reg.userName = NewUsername.Text;
@@ -45,13 +54,7 @@ namespace chat
                     textBox.Text = "";
                 }
             }
-            if (newUser.userName == "请输入用户名" || newUser.password == "请输入密码" || newUser.userName == "" || newUser.password == "")
-            {
-                MessageBox.Show("请输入注册信息！");
-                NewUsername.Text = "请输入用户名";
-                NewPassword.Text = "请输入密码";
-                return;
-            }
+            
         }
 
         private void NewUsername_MouseClick(object sender, MouseEventArgs e)
